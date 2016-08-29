@@ -31,13 +31,20 @@ spkey(key, str)
 	}
 }
 
+reset()
+{
+  global
+  last:=""
+}
 
 $F2::
 enable:=1-enable
+if(enable=1)
+  reset()
 return
 
 $backspace::
-last:=""
+reset()
 send {backspace}
 return
 
@@ -129,22 +136,6 @@ $;::
     spkey(";", "ng")
 return
 
-$1::
-    spkey("1", "")
-return
-$2::
-    spkey("2", "")
-return
-$3::
-    spkey("3", "")
-return
-$4::
-    spkey("4", "")
-return
-$5::
-    spkey("5", "")
-return
-
 $6::
     spkey("6", "zh")
 return
@@ -161,6 +152,38 @@ $0::
     spkey("0", "ua")
 return
 
-$Space::
-    spkey(" ", "")
+$1::
+send 1
+if(enable=1)
+  reset()
+return
+
+$2::
+send 2
+if(enable=1)
+  reset()
+return
+
+$3::
+send 3
+if(enable=1)
+  reset()
+return
+
+$4::
+send 4
+if(enable=1)
+  reset()
+return
+
+$5::
+send 5
+if(enable=1)
+  reset()
+return
+
+$space::
+send {space}
+if(enable=1)
+  reset()
 return

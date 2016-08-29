@@ -70,17 +70,89 @@ spkey(key, con, vow0, vow0c="*", vow1="", vow1c="*", vow2="", vow2c="*", vow3=""
 	}
 }
 
+reset()
+{
+  global
+  sppart:=0
+  lastcon:=""
+  lastvow:=""
+}
+
 $F2::
 enable:=1-enable
 if(enable=1)
-	sppart:=0
+  reset()
 return
 
 $backspace::
-lastcon:=""
-lastvow:=""
-sppart:=0
+reset()
 send {backspace}
+return
+
+$1::
+send 1
+if(enable=1)
+  reset()
+return
+
+$2::
+send 2
+if(enable=1)
+  reset()
+return
+
+$3::
+send 3
+if(enable=1)
+  reset()
+return
+
+$4::
+send 4
+if(enable=1)
+  reset()
+return
+
+$5::
+send 5
+if(enable=1)
+  reset()
+return
+
+$6::
+send 6
+if(enable=1)
+  reset()
+return
+
+$7::
+send 7
+if(enable=1)
+  reset()
+return
+
+$8::
+send 8
+if(enable=1)
+  reset()
+return
+
+$9::
+send 9
+if(enable=1)
+  reset()
+return
+
+$0::
+send 0
+if(enable=1)
+  reset()
+return
+
+$space::
+send {space}
+if(enable=1)
+  reset()
 return
 
 $t::

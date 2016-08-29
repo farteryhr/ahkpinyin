@@ -160,61 +160,91 @@ return
 
 $F1::
 if(enable=1)
+{
   send 1
+  reset()
+}
 else
   send {F1}
 return
 $F2::
 if(enable=1)
+{
   send 2
+  reset()
+}
 else
   send {F2}
 return
 $F3::
 if(enable=1)
+{
   send 3
+  reset()
+}
 else
   send {F3}
 return
 $F4::
 if(enable=1)
+{
   send 4
+  reset()
+}
 else
   send {F4}
 return
 $F5::
 if(enable=1)
+{
   send 5
+  reset()
+}
 else
   send {F5}
 return
 $F6::
 if(enable=1)
+{
   send 6
+  reset()
+}
 else
   send {F6}
 return
 $F7::
 if(enable=1)
+{
   send 7
+  reset()
+}
 else
   send {F7}
 return
 $F8::
 if(enable=1)
+{
   send 8
+  reset()
+}
 else
   send {F8}
 return
 $F9::
 if(enable=1)
+{
   send 9
+  reset()
+}
 else
   send {F9}
 return
 $F10::
 if(enable=1)
+{
   send 0
+  reset()
+}
 else
   send {F10}
 return
@@ -237,6 +267,12 @@ else if(enable=2)
   reset()
 }
 ;send {shift}
+return
+
+$space::
+if(enable=1)
+  reset()
+send {space}
 return
 
 $^!,::
