@@ -12,7 +12,7 @@ spkey(key, str)
 	{
 		if(last="#ng" and (str="a" or str="e" or str="o" or str="u"))
 			send '
-		if(last="#n" and (str="a" or str="e" or str="o" or or str="i" or str="u"))
+		if(last="#n" and (str="a" or str="e" or str="o" or or str="i" or str="u" or str="g"))
 			send '
 		if((last="j" or last="q" or last="x") and str="o")
 			send i
